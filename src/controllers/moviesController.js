@@ -57,6 +57,7 @@ const moviesController = {
     },
     //Aqui debo modificar para crear la funcionalidad requerida
     'buscar': async(req, res) => {
+        let title = req.body.titulo
         //usando node fetch para consumir la api
         let response = await fetch(`http://www.omdbapi.com/?t=${title}&apikey=c0a59bf`)//url
        let result = await response.json()//devuelve info parseada porque no lo muestra en crudo
